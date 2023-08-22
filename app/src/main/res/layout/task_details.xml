@@ -27,7 +27,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="Date created: "
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_name" />
@@ -38,7 +38,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="22.08.2023"
         android:textColor="@color/lightblue"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/task_date_created"
         app:layout_constraintTop_toTopOf="@+id/task_date_created" />
@@ -51,7 +51,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="Starting hour: "
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_date_created" />
@@ -62,7 +62,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="14:00"
         android:textColor="@color/lightblue"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/task_hour_created"
         app:layout_constraintTop_toTopOf="@+id/task_hour_created" />
@@ -73,11 +73,11 @@
         android:fontFamily="@font/dm_sans"
         android:text="Hour due: "
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@+id/task_hour_created"
         app:layout_constraintBottom_toBottomOf="@+id/task_hour_created"
-        app:layout_constraintEnd_toStartOf="@+id/task_hour_due"
+        app:layout_constraintStart_toStartOf="@+id/task_date_due_text"
         />
     <TextView
         android:id="@+id/task_hour_due"
@@ -86,10 +86,10 @@
         android:fontFamily="@font/dm_sans"
         android:text="14:00"
         android:textColor="@color/lightblue"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:layout_marginEnd="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/task_hour_due_text"
         app:layout_constraintTop_toTopOf="@+id/task_hour_created"
         app:layout_constraintBottom_toBottomOf="@+id/task_hour_created"/>
 
@@ -98,12 +98,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
         android:fontFamily="@font/dm_sans"
+        android:layout_marginStart="15dp"
         android:text="Date due: "
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/task_date"
         app:layout_constraintEnd_toStartOf="@+id/task_date_due"
         app:layout_constraintTop_toBottomOf="@+id/task_name" />
     <TextView
@@ -114,9 +115,9 @@
         android:layout_marginEnd="35dp"
         android:text="25.08.2023"
         android:textColor="@color/lightblue"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/task_date_due_text"
         app:layout_constraintTop_toTopOf="@+id/task_date_created"
         app:layout_constraintBottom_toBottomOf="@+id/task_date_created"
         />
@@ -147,7 +148,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="Place: "
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_details"
@@ -159,7 +160,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="Prishtina"
         android:textColor="@color/lightblue"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@+id/task_place_text"
         app:layout_constraintBottom_toBottomOf="@id/task_place_text"
@@ -174,7 +175,7 @@
         android:fontFamily="@font/dm_sans"
         android:text="Description: "
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_place_text"
@@ -189,8 +190,9 @@
         android:paddingEnd="35dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis viverra, feugiat massa iaculis, facilisis mi. Aliquam vel dui convallis, fermentum nulla non, blandit sem. Vivamus quis placerat risus, ut placerat velit. Nullam et elit tincidunt, hendrerit augue sit amet, ultrices arcu. Ut molestie, tortor eu porttitor egestas, orci lorem maximus velit, nec sodales ligula lorem quis sem. Etiam pellentesque dolor eu tincidunt sagittis. Curabitur elementum elementum mi, vel sagittis leo semper vitae."
         android:textColor="@color/lightblue"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
+        android:lineBreakWordStyle="phrase"
         app:layout_constraintTop_toBottomOf="@+id/task_description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -215,11 +217,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
-
-
-
-
-
-
+    <ImageButton
+        android:id="@+id/edit"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/edit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
