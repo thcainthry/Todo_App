@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Task's name"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/task_date_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Date created: "
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_name" />
+    <TextView
+        android:id="@+id/task_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="22.08.2023"
+        android:textColor="@color/lightblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/task_date_created"
+        app:layout_constraintTop_toTopOf="@+id/task_date_created" />
+    <TextView
+        android:id="@+id/task_hour_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Starting hour: "
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_date_created" />
+    <TextView
+        android:id="@+id/task_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="14:00"
+        android:textColor="@color/lightblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/task_hour_created"
+        app:layout_constraintTop_toTopOf="@+id/task_hour_created" />
+    <TextView
+        android:id="@+id/task_hour_due_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Hour due: "
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/task_hour_created"
+        app:layout_constraintBottom_toBottomOf="@+id/task_hour_created"
+        app:layout_constraintEnd_toStartOf="@+id/task_hour_due"
+        />
+    <TextView
+        android:id="@+id/task_hour_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="14:00"
+        android:textColor="@color/lightblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/task_hour_created"
+        app:layout_constraintBottom_toBottomOf="@+id/task_hour_created"/>
+
+    <TextView
+        android:id="@+id/task_date_due_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Date due: "
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/task_date_due"
+        app:layout_constraintTop_toBottomOf="@+id/task_name" />
+    <TextView
+        android:id="@+id/task_date_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:layout_marginEnd="35dp"
+        android:text="25.08.2023"
+        android:textColor="@color/lightblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/task_date_created"
+        app:layout_constraintBottom_toBottomOf="@+id/task_date_created"
+        />
+
+
+
+    <TextView
+        android:id="@+id/task_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Details"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/task_name"
+        app:layout_constraintTop_toBottomOf="@+id/task_hour_created"
+        />
+
+    <TextView
+        android:id="@+id/task_place_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Place: "
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_details"
+        />
+    <TextView
+        android:id="@+id/task_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Prishtina"
+        android:textColor="@color/lightblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/task_place_text"
+        app:layout_constraintBottom_toBottomOf="@id/task_place_text"
+        app:layout_constraintStart_toEndOf="@+id/task_place_text"
+        />
+    <TextView
+        android:id="@+id/task_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Description: "
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_place_text"
+        />
+    <TextView
+        android:id="@+id/task_description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:layout_marginTop="8dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et felis viverra, feugiat massa iaculis, facilisis mi. Aliquam vel dui convallis, fermentum nulla non, blandit sem. Vivamus quis placerat risus, ut placerat velit. Nullam et elit tincidunt, hendrerit augue sit amet, ultrices arcu. Ut molestie, tortor eu porttitor egestas, orci lorem maximus velit, nec sodales ligula lorem quis sem. Etiam pellentesque dolor eu tincidunt sagittis. Curabitur elementum elementum mi, vel sagittis leo semper vitae."
+        android:textColor="@color/lightblue"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/task_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/done"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
