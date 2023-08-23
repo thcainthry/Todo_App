@@ -3,4 +3,5 @@
     <string name="profile_picture">profile picture goes here</string>
     <string name="hide_side">this hides the profile panel</string>
     <string name="analytics_graph">the analytic graph goes here</string>
+    <string name="manage_acc">manage, log out and other stuff</string>
 </resources>

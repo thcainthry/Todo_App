@@ -18,6 +18,19 @@
         android:contentDescription="@string/profile_picture"
         />
     <ImageButton
+        android:id="@+id/manage_account"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/manage_accounts"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile"
+        android:contentDescription="@string/manage_acc"
+        />
+    <ImageButton
         android:id="@+id/close_side_bar"
         android:layout_width="60dp"
         android:layout_height="60dp"
