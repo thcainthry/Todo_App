@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/add_task_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="New task"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/task_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Task name: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/taskInput"
+        app:layout_constraintTop_toBottomOf="@+id/add_task_details" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/taskInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Task name"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        app:boxBackgroundColor="@color/bgblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task_name_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/taskInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/date_due_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Due date: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dateInput"
+        app:layout_constraintTop_toBottomOf="@+id/taskInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="25/08/2023"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/calendar_light"
+        app:boxBackgroundColor="@color/bgblue"
+        app:layout_constraintStart_toStartOf="@id/taskInput"
+        app:layout_constraintTop_toBottomOf="@id/date_due_input"
+        app:layout_constraintEnd_toEndOf="@id/taskInput"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/starting_hour_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Starting hour: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/hourInput"
+        app:layout_constraintTop_toBottomOf="@+id/dateInput" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hourInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="12:00"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/bgblue"
+        app:layout_constraintStart_toStartOf="@id/dateInput"
+        app:layout_constraintTop_toBottomOf="@id/starting_hour_text"
+        app:layout_constraintEnd_toEndOf="@id/dateInput"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hourInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/due_hour_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Due hour: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dueHourInput"
+        app:layout_constraintTop_toBottomOf="@+id/hourInput" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dueHourInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="15:00"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/bgblue"
+        app:layout_constraintStart_toStartOf="@id/hourInput"
+        app:layout_constraintTop_toBottomOf="@id/due_hour_text"
+        app:layout_constraintEnd_toEndOf="@id/hourInput"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dueHourInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/place_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Pick place: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/placeInput"
+        app:layout_constraintTop_toBottomOf="@+id/dueHourInput" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/placeInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Prishtina"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/bgblue"
+        app:layout_constraintStart_toStartOf="@id/dueHourInput"
+        app:layout_constraintTop_toBottomOf="@id/place_text"
+        app:layout_constraintEnd_toEndOf="@id/dueHourInput"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/placeInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Description: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/descriptionInput"
+        app:layout_constraintTop_toBottomOf="@+id/placeInput" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Describe your task !!!"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/bgblue"
+        app:layout_constraintStart_toStartOf="@id/placeInput"
+        app:layout_constraintTop_toBottomOf="@id/description_text"
+        app:layout_constraintEnd_toEndOf="@id/placeInput"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addPlates"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/darkblue"
+        android:text="Add task"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionInput"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
