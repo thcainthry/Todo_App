@@ -90,8 +90,25 @@
         app:layout_constraintTop_toBottomOf="@+id/categories_recycleview"
         app:layout_constraintBottom_toTopOf="@id/todays_tasks"
         />
+    <TextView
+        android:id="@+id/task_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="23/08/2023"
+        android:textColor="@color/lightblue"
+        android:textStyle="bold"
+        android:fontFamily="@font/dm_sans"
+        app:layout_constraintEnd_toStartOf="@+id/calendar"
+        app:layout_constraintTop_toTopOf="@+id/todays_tasks_text"
+        app:layout_constraintBottom_toBottomOf="@id/todays_tasks_text"
+        />
 
     <ImageButton
+        android:id="@+id/calendar"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@android:color/transparent"

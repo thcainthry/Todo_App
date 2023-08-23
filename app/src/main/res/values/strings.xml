@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Todo App</string>
+    <string name="profile_picture">profile picture goes here</string>
+    <string name="hide_side">this hides the profile panel</string>
+    <string name="analytics_graph">the analytic graph goes here</string>
 </resources>
