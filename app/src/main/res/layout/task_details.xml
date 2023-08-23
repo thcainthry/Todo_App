@@ -167,6 +167,34 @@
         app:layout_constraintStart_toEndOf="@+id/task_place_text"
         />
     <TextView
+        android:id="@+id/category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Category: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/task_place"
+        app:layout_constraintTop_toBottomOf="@+id/task_details"
+        app:layout_constraintEnd_toStartOf="@id/task_category"
+        />
+    <TextView
+        android:id="@+id/task_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Business"
+        android:textColor="@color/lightblue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/task_place_text"
+        app:layout_constraintBottom_toBottomOf="@id/task_place_text"
+        app:layout_constraintStart_toEndOf="@+id/category_text"
+        />
+    <TextView
         android:id="@+id/task_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

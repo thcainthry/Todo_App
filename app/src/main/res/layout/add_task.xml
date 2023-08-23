@@ -182,6 +182,29 @@
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/categories_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Pick category: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/descriptionInput"
+        app:layout_constraintTop_toBottomOf="@+id/placeInput" />
+
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/bgblue"
+        android:popupBackground="@color/bgblue"
+        app:layout_constraintStart_toStartOf="@id/placeInput"
+        app:layout_constraintEnd_toEndOf="@id/placeInput"
+        app:layout_constraintTop_toBottomOf="@id/categories_text"
+        />
 
 
     <TextView
@@ -195,7 +218,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/descriptionInput"
-        app:layout_constraintTop_toBottomOf="@+id/placeInput" />
+        app:layout_constraintTop_toBottomOf="@+id/categories_spinner" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/descriptionInput"
         android:layout_width="250dp"
@@ -214,6 +237,8 @@
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Button
         android:id="@+id/addPlates"
