@@ -4,31 +4,102 @@
     android:background="@drawable/bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageButton
-        android:id="@+id/profile"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="300dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/profile"
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Welcome!"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Name: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/name_input"
+        app:layout_constraintBottom_toTopOf="@id/name_input"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_input"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/darkblue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/username_text"
-        android:contentDescription="@string/profile_picture"
+        app:layout_constraintTop_toBottomOf="@id/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Surname: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/name_input"
+        app:layout_constraintTop_toBottomOf="@id/name_input"
         />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/surname_input"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Surname"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/darkblue"
+        app:layout_constraintStart_toStartOf="@id/name_input"
+        app:layout_constraintEnd_toEndOf="@id/name_input"
+        app:layout_constraintTop_toBottomOf="@id/surname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/surnameInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/username_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/dm_sans"
-        android:text="Username: "
+        android:text="Username or email: "
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/username_input"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@id/surname_input"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -38,11 +109,9 @@
         android:hint="Username or email"
         android:textColorHint="@color/white"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
         app:boxBackgroundColor="@color/darkblue"
-        app:layout_constraintStart_toStartOf="@id/profile"
-        app:layout_constraintEnd_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@id/surname_input"
+        app:layout_constraintEnd_toEndOf="@id/surname_input"
         app:layout_constraintTop_toBottomOf="@id/username_text">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -94,7 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/dm_sans"
-        android:text="Don't have an account!! Sign up?"
+        android:text="Already have an account? Log in!"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -104,15 +173,13 @@
         />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/signup"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/darkblue"
-        android:text="Log in"
+        android:text="Sign up"
         android:textColor="@color/white"
         app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="@id/password_input"
